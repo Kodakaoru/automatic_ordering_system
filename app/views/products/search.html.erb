@@ -1,0 +1,27 @@
+<h2>商品検索結果画面</h2>
+
+<%= link_to '商品検索へ戻る' , fload_products_path %>
+
+</br>name送信データ確認用ディスプレイ→　<%= @name.inspect %></br>
+expiration送信データ確認用ディスプレイ→　<%= @expiration.inspect %></br>
+ordering送信データ確認用ディスプレイ→　<%= @ordering.inspect %></br>
+flg送信データ確認用ディスプレイ→　<%= @flg.inspect %></br>
+
+<table class="display search_html_margin" >
+  <tr>
+    <th>商品名</th>
+    <th>商品コード</th>
+    <th>発注実績</th>
+    <th>入荷日</th>
+    <th>消費期限</th>
+  </tr>
+  <% @datas.each do |data| %>
+  <tr>
+    <td><%= data.name %></td>
+    <td><%= data.nameid %></td>
+    <td><%= data.ordering %></td>
+    <td><%= data.arrival %></td>
+    <td><%= data.expiration %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,145 @@
+ /*
+  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  * listed below.
+  *
+  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+  * vendor/assets/stylesheets directory can be referenced here using a relative path.
+  *
+  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+  * files in this directory. Styles in this file should be added after the last require_* statement.
+  * It is generally better to create a new file per style scope.
+  *
+  *= require_tree .
+  *= require_self
+  */
+  *{
+      margin: 0;
+      padding: 0;
+  }
+
+ .container{
+   width: 864px;
+   margin:  20px auto;
+ }
+
+ body{
+   font-family: verdana,sans-serif;
+   font-size: 14px;
+   background-color: #ffffe0;
+ }
+
+ .logo{
+ }
+
+ #nav li
+ {
+     display: inline;
+     list-style-type: none;
+     padding-right: 30px;
+     color: #FFFFFF;
+ }
+
+ #nav
+ {
+     margin: 0 0 11px 0 ;
+     padding: 15px 30px 10px 30px;
+     background-image: url("menu.png")
+ }
+
+ #nav li a:link
+ {
+     color:#f5f3eb;
+     text-decoration: none;
+ }
+
+ #nav li a:visited
+ {
+     color:#f5f3eb;
+     text-decoration: none;
+ }
+
+ #nav li a:hover
+ {
+     color:#e4dbb9;
+     text-decoration: none;
+ }
+
+ #nav li a:active
+ {
+     color:ffffff;
+     text-decoration: none;
+ }
+
+ h2{
+   font-size: 16px;
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+   border-bottom: 1px  solid #ddd;
+ }
+
+ table.display{
+     border-top:1px solid #663300;
+     border-left:1px solid #663300;
+     border-collapse:collapse;
+     border-spacing:0;
+     background-color:#ffffff;
+     empty-cells:show;
+ }
+ .display th{
+     border-right:1px solid #663300;
+     border-bottom:1px solid #663300;
+     color:#800000;
+     background-color:#996633;
+     background-image:url("table-back.gif");
+     background-position:left top;
+     padding:0.3em 1em;
+     text-align:center;
+ }
+ .display td{
+     border-right:1px solid #663300;
+     border-bottom:1px solid #663300;
+     padding:0.3em 1em;
+ }
+
+
+  input[type="text"], textarea{
+    box-sizing: border-box;
+    width: 400px;
+    padding: 5px;
+  }
+
+  .new_html_margin{
+    margin-top: 20px;
+  }
+
+  .search_html_margin{
+    margin-top: 20px;
+  }
+
+  .error {
+    font-size: 12px;
+    font-weight: bold;
+    color: tomato;
+  }
+
+ /*
+ .header-menu{
+   font-size: 12px;
+   font-weight: normal;
+   float: right;
+ }
+
+
+
+
+
+
+ .command{
+   font-size: 12px;
+ }
+
+ h3{
+   font-size: 14px;
+   padding-top: 25px;
+ }

@@ -1,0 +1,22 @@
+<h2>商品検索画面</h2>
+
+<%= form_for :product, url: search_products_path do |f| %>
+  <p>
+    商品名
+    <input type="text" name="name">
+  </p>
+
+  <p class="search_html_margin" >
+    <%= label_tag :expiration, "消費期限間近商品" %>
+    <%= check_box_tag :expiration, "true" %>
+  </p>
+
+  <p class="search_html_margin" >
+    <%= label_tag :ordering, "発注実績あり商品" %>
+    <%= check_box_tag :ordering, "true"  %>
+  </p>
+
+  <p class="search_html_margin">
+    <%= f.submit @submit %>
+  </p>
+<% end %>

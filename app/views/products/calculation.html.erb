@@ -1,0 +1,19 @@
+<h2>1週間の平均実績を算出した結果<h2>
+
+確認用ディスプレイ→　<%= @stringnow.inspect %> <%= @stringnow %></br>
+確認用ディスプレイ→　<%= @now.inspect %> </br>
+現在日付が取得できなくなってる、なぜ？↑　一回目に使用した日付がそのまま使われてる？</br>
+最新の日付を使用する方法は？　毎回現在日付に上書く方法は？
+
+<table class="display search_html_margin" >
+  <tr>
+    <th>商品名,商品コード</th>
+    <th>算出発注数</th>
+  </tr>
+  <% @sums.each do |key,value| %>
+  <tr>
+    <td><%= "#{key}" %></td>
+    <td><%= value / 7 %></td>
+  </tr>
+  <% end %>
+</table>

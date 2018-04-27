@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>System</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+    <h1><%= link_to image_tag('logo.jpg' , class: 'logo'), root_path %></h1>
+    <ul id="nav">
+      <li>☆☆☆☆☆☆☆☆☆</a></li>
+      <li><%= link_to '自動算出' , calculation_products_path %></a></li>
+      <li><%= link_to '商品検索' , fload_products_path %></li>
+      <li><%= link_to '商品登録' , new_product_path %></li>
+      <li>めにゅー4</a></li>
+      <li>めにゅー5</a></li>
+      <li>☆☆☆☆☆☆☆☆☆</a></li>
+    </ul>
+    <%= yield %>
+    </div>
+  </body>
+</html>

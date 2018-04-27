@@ -1,0 +1,59 @@
+<h2>商品登録画面</h2>
+
+<%= form_for :product, url: products_path do |f| %>
+<p>
+  商品名
+</p>
+<p>
+  <%= f.text_field :name, placeholder: 'enter name' %>
+  <% if @product.errors.messages[:name].any? %>
+  <span class="error"><%= @product.errors.messages[:name][0] %></span>
+  <% end %>
+</p>
+
+<p class="new_html_margin">
+  商品ID
+<p>
+  <%= f.text_field :nameid, placeholder: 'enter nameid' %>
+  <% if @product.errors.messages[:nameid].any? %>
+  <span class="error"><%= @product.errors.messages[:nameid][0] %></span>
+  <% end %>
+</p>
+
+<p class="new_html_margin">
+  発注数
+<p>
+  <%= f.text_field :ordering, placeholder: 'enter ordering' %>
+  <% if @product.errors.messages[:ordering].any? %>
+  <span class="error"><%= @product.errors.messages[:ordering][0] %></span>
+  <% end %>
+</p>
+
+<p class="new_html_margin">
+  入荷日（yyyymmdd形式）
+<p>
+  <%= f.text_field :arrival, placeholder: 'enter arrival' %>
+  <% if @product.errors.messages[:arrival].any? %>
+  <span class="error"><%= @product.errors.messages[:arrival][0] %></span>
+  <% end %>
+</p>
+
+<p class="new_html_margin">
+  消費期限（yyyymmdd形式）
+<p>
+  <%= f.text_field :expiration, placeholder: 'enter expiration' %>
+  <% if @product.errors.messages[:expiration].any? %>
+  <span class="error"><%= @product.errors.messages[:expiration][0] %></span>
+  <% end %>
+</p>
+
+<p class="new_html_margin">
+  <%= f.submit @submit %>
+</p>
+<% end %>
+<p class="new_html_margin">
+  本来であれば、</br>他のシステムから送られてきた情報を自動で登録する流れになり、</br>
+  このページ自体必要はないが、他システムから情報が送られてきたと仮定して</br>
+  DBに情報が追加されることを確認するための勉強用簡易版。</br>
+  商品IDは採番テーブルから自動採番される予定。
+</p>

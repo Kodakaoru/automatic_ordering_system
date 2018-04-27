@@ -1,0 +1,19 @@
+<h2>初期画面はとりあえずDB確認用一覧表示　重複防止とログイン実装予定<h2>
+<table class="display">
+  <tr>
+    <th>商品名</th>
+    <th>商品コード</th>
+    <th>発注実績</th>
+    <th>入荷日</th>
+    <th>消費期限</th>
+  </tr>
+  <% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.nameid %></td>
+    <td><%= product.ordering %></td>
+    <td><%= product.arrival %></td>
+    <td><%= product.expiration %></td>
+  </tr>
+  <% end %>
+</table>
